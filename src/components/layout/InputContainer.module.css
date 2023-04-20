@@ -2,4 +2,22 @@
     width: 55%;
     height: 90vh;
     border: 1px solid red;
+    padding: 1.5em;
+}
+
+.text_area {
+    border: 1px solid #666;
+    font-size: 2em;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 2em;
+    color: #0A3871;
+}
+
+.text_area:focus {
+    outline: none ;
+}
+
+.text_area::placeholder {
+    color: #0A3871;
 }
