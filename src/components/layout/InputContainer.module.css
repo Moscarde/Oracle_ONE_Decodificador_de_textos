@@ -1,23 +1,69 @@
 .container {
-    width: 55%;
+    width: 60%;
     height: 90vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 1.5em;
 }
 
 .text_area {
-    border: 1px solid #666;
+    border: none;
     font-size: 2em;
     background-color: transparent;
     width: 100%;
+    height: 78%;
     margin-top: 2em;
     color: #0A3871;
 }
 
 .text_area:focus {
-    outline: none ;
+    outline: none;
 }
 
 .text_area::placeholder {
     color: #0A3871;
 }
+
+.description {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    
+}
+
+.description p {
+    font-size: 12px;
+    color: #495057;
+}
+
+.attention_icon {
+    height: 16px;
+    width: 16px;
+    background-position: center;
+    background-size: cover;
+    margin-right: .4em;
+}
+
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.button {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    font-weight: 400;
+    color: #0A3871;
+    padding: 1em 8em;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #0A3871;
+    color: #fff;
+}
+
+

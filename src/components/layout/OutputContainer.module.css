@@ -1,9 +1,28 @@
 .container {
-    width: 30%;
+    width: 25%;
     height: 90vh;
-    border: 1px solid red;
     background-color: #fff;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    padding: 1em;
+    padding: 1.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.empty_text_img {
+    height: 300px;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.container h2 {
+    font-size: 24px;
+    font-weight: 700px;
+    color: #343A40;
+    margin-bottom: .5em;
 }
