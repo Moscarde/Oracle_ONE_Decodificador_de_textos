@@ -1,32 +1,17 @@
 import React, { useState } from 'react';
 
+
 // styles
 import styles from './InputContainer.module.css'
 import AttentionImg from '../../assets/img/Attention.svg'
 
-function InputContainer() {
-    const [mode, setMode] = useState('encrypt');
-    const [text, setText] = useState('')
+function InputContainer({ onInputChange, changeMode, mode }) {
 
-    // const handleClick = (mode) => {
-    //     setIsActive(mode);
-    // };
-
+    
     let activeOption = 'decrypt'
-
-    function changeMode(mode) {
-        setMode(mode)
-    }
-
-    function handleChange(e) {
-        setText(e.target.value)
-        console.log(text)
-    }
-
-
     return (
         <div className={styles.container}>
-            <textarea name="inputText" placeholder="Digite seu texto" className={styles.text_area} onChange={handleChange} />
+            <textarea name="inputText" placeholder="Digite seu texto" className={styles.text_area} onChange={onInputChange} />
             <div className={styles.description}>
                 <div
                     style={{
