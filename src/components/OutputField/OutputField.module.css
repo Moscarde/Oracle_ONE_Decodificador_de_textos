@@ -12,7 +12,7 @@
 }
 
 .empty_text_img {
-    height: 300px;
+    height: 320px;
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@
 }
 
 .outputActive button {
-    background: #D8DFE8;
+    background: transparent;
     border: 1px solid #0A3871;
     border-radius: 20px;
     font-weight: 400;
@@ -52,4 +52,8 @@
     width: 100%;
     transition: .2s;
     cursor: pointer;
+}
+
+.outputActive button:hover {
+    background: #D8DFE8;
 }

@@ -2,13 +2,13 @@ import React, { useState, useRef } from 'react';
 
 
 // styles
-import styles from './InputContainer.module.css'
+import styles from './InputField.module.css'
 import AttentionImg from '../../assets/img/Attention.svg'
 
 function InputContainer({ onInputChange, changeMode, mode }) {
     const textRef = useRef(null);
-
     let activeOption = 'decrypt'
+    
     return (
         <div className={styles.container}>
             <textarea name="inputText" placeholder="Digite seu texto" className={styles.text_area} onChange={onInputChange} ref={textRef} />

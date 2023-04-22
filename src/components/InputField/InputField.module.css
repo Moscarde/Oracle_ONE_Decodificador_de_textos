@@ -54,7 +54,7 @@
 
 
 .button {
-    background: #D8DFE8;
+    background: transparent;
     border: 1px solid #0A3871;
     border-radius: 20px;
     font-weight: 400;
@@ -64,9 +64,17 @@
     cursor: pointer;
 }
 
+.button:hover {
+    background: #D8DFE8;
+}
+
 .active {
     background-color: #0A3871;
     color: #fff;
 }
 
+.active:hover {
+    background: #093264;;
+    
+}
 

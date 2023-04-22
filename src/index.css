@@ -1,10 +1,18 @@
-*{
+* {
   padding: 0;
   margin: 0;
   font-family: Helvetica;
   box-sizing: border-box;
   font-size: 16px;
 }
+
 body {
   background-color: #F3F5FC;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2em;
 }

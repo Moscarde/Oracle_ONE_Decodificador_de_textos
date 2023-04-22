@@ -1,13 +1,20 @@
 import React, { useState, createContext } from 'react';
 
-import styles from './OutputContainer.module.css'
+import styles from './OutputField.module.css'
 import emptyTextImg from '../../assets/img/EmptText.svg'
 
-function OutputContainer({ value }) {
+function OutputContainer({ outputValue }) {
     const [text, setText] = useState('')
 
-    function copyToClipboard() {
-        navigator.clipboard.writeText(value);
+    function copyToClipboard(e) {
+        // Copy output texto to clipboard
+        navigator.clipboard.writeText(outputValue);
+
+        // Change button value to confirm copy
+        e.target.innerHTML = 'Texto copiado!'
+        setTimeout(() => {
+            e.target.innerHTML = 'Copiar'
+        }, 2000)
     }
 
 
@@ -15,12 +22,12 @@ function OutputContainer({ value }) {
     return (
         <div className={styles.container}>
 
-            {value ?
+            {outputValue ?
                 (
                     <div className={styles.outputActive}>
-                        <p>{value}</p>
+                        <p>{outputValue}</p>
                         <button
-                            onClick={() => { copyToClipboard() }}
+                            onClick={copyToClipboard}
                         >
                             Copiar
                         </button>

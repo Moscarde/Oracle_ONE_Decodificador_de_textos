@@ -1,18 +1,18 @@
 import { useState, useRef, useEffect } from "react";
 
-import Cipher from './utils/Cipher';
+import Encryption from './utils/Encryption';
 
-import InputContainer from './components/layout/InputContainer'
-import OutputContainer from './components/layout/OutputContainer'
+import InputContainer from './components/InputField/InputField'
+import OutputContainer from './components/OutputField/OutputField'
 
 import Header from './components/layout/Header'
-import styles from './app.module.css'
 
 function App() {
-    const [inputValue, setInputValue] = useState("");
+    const [outputValue, setOutputValue] = useState("");
     const [mode, setMode] = useState('encrypt');
     const [inputText, setInputText] = useState('');
     let processedText = ''
+
 
     function changeMode(newMode, textRef) {
         setMode(newMode)
@@ -21,35 +21,30 @@ function App() {
 
     // Executar ação após atualização do estado
     useEffect(() => {
-        console.log(`mode atualizado`, mode);
-        console.log(inputText);
-        cipherText(inputText)
+        textEncryption(inputText)
     }, [mode, inputText]);
-    
+
     function handleInputChange(e) {
-        cipherText(e.target.value)
+        textEncryption(e.target.value)
     }
-    
-    
-    function cipherText(text) {
-        // console.log('mode atual', mode)
-        // console.log('cifrando', text)
+
+
+    function textEncryption(text) {
         if (mode === 'encrypt') {
-            processedText = Cipher.encrypt(text)
+            processedText = Encryption.encrypt(text)
         } else if (mode === 'decrypt') {
-            processedText = Cipher.decrypt(text)
+            processedText = Encryption.decrypt(text)
         }
-        
-        // console.log('setando', processedText)
-        setInputValue(processedText)
+        setOutputValue(processedText)
+        console.log(processedText)
     }
 
 
     return (
-        <main className={styles.view}>
+        <main>
             <Header />
-            <InputContainer onInputChange={handleInputChange} changeMode={changeMode} mode={mode} textRef/>
-            <OutputContainer value={inputValue} />
+            <InputContainer onInputChange={handleInputChange} changeMode={changeMode} mode={mode} textRef />
+            <OutputContainer outputValue={outputValue} />
         </main>
     );
 }
