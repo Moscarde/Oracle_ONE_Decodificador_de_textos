@@ -16,6 +16,7 @@
     height: 78%;
     margin-top: 2em;
     color: #0A3871;
+    resize: unset;
 }
 
 .text_area:focus {
