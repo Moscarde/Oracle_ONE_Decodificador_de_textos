@@ -3,6 +3,9 @@
     height: 90vh;
     /* border: 1px solid red; */
     padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .text_area {

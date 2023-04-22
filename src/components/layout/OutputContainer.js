@@ -5,13 +5,26 @@ import emptyTextImg from '../../assets/img/EmptText.svg'
 
 function OutputContainer({ value }) {
     const [text, setText] = useState('')
+
+    function copyToClipboard() {
+        navigator.clipboard.writeText(value);
+    }
+
+
+
     return (
         <div className={styles.container}>
 
             {value ?
                 (
-                    <p>{value}</p>
-
+                    <div className={styles.outputActive}>
+                        <p>{value}</p>
+                        <button
+                            onClick={() => { copyToClipboard() }}
+                        >
+                            Copiar
+                        </button>
+                    </div>
                 ) : (
                     <>
                         <div

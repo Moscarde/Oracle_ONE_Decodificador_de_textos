@@ -8,7 +8,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
 }
 
 .empty_text_img {
@@ -25,4 +25,31 @@
     font-weight: 700px;
     color: #343A40;
     margin-bottom: .5em;
+}
+
+.outputActive {
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.outputActive p{
+    width: 100%;   
+    font-size: 24px;
+    color: #495057;
+    line-height: 150%;
+}
+
+.outputActive button {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    font-weight: 400;
+    color: #0A3871;
+    padding: 1em ;
+    width: 100%;
+    transition: .2s;
+    cursor: pointer;
 }
