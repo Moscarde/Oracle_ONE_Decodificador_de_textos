@@ -19,7 +19,7 @@ function InputContainer({ onInputChange, changeMode, mode }) {
                     }}
                     className={styles.attention_icon}>
                 </div>
-                <p>Apenas letras minusculas e sem acento</p>
+                <p>Apenas letras minúsculas e sem acento</p>
             </div>
             <div className={styles.actions}>
                 <button

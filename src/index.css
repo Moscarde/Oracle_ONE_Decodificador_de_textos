@@ -16,3 +16,16 @@ main {
   justify-content: space-between;
   padding: 2em;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    /* align-items: center */
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    padding: 1.5em 1em;
+  }
+}

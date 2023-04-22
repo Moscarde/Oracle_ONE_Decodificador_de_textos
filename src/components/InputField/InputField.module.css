@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 1em;
-    
+
 }
 
 .description p {
@@ -59,7 +59,8 @@
     border-radius: 20px;
     font-weight: 400;
     color: #0A3871;
-    padding: 1em 8em;
+    padding: 1em;
+    width: 48%;
     transition: .2s;
     cursor: pointer;
 }
@@ -74,7 +75,29 @@
 }
 
 .active:hover {
-    background: #093264;;
-    
+    background: #093264;
+    ;
+
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 75vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        padding: 0 0 1em 0;
+        height: 70vh;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+    .button {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+}

@@ -1,6 +1,7 @@
 .container {
     width: 25%;
-    height: 90vh;
+    min-width: 350px;
+    min-height: 90vh;
     background-color: #fff;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -35,8 +36,8 @@
     height: 100%;
 }
 
-.outputActive p{
-    width: 100%;   
+.outputActive p {
+    width: 100%;
     font-size: 24px;
     color: #495057;
     line-height: 150%;
@@ -48,12 +49,30 @@
     border-radius: 20px;
     font-weight: 400;
     color: #0A3871;
-    padding: 1em ;
+    padding: 1em;
     width: 100%;
     transition: .2s;
     cursor: pointer;
+    margin-top: 1em;
 }
 
 .outputActive button:hover {
     background: #D8DFE8;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        min-height: 15vh;
+    }
+
+    .empty_text_img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        padding: 1em;
+    }
 }
