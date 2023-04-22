@@ -6,7 +6,7 @@ const text = 'Ola mundo'
 // A letra 'a' é convertida para 'ai'
 // A letra 'o' é convertida para 'ober'
 // A letra 'u' é convertida para 'ufat'
-class Cryptography {
+class Cipher {
     static decrypt(text) {
         let decryptedText = text.replaceAll('enter', 'e');
         decryptedText = decryptedText.replaceAll('imes', 'i');
@@ -27,4 +27,4 @@ class Cryptography {
 
 }
 
-export default Cryptography
+export default Cipher

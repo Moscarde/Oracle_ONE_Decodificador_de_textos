@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
-import Cryptography from './utils/Cryptography';
+import Cipher from './utils/Cipher';
 
 import InputContainer from './components/layout/InputContainer'
 import OutputContainer from './components/layout/OutputContainer'
@@ -11,19 +11,36 @@ import styles from './app.module.css'
 function App() {
     const [inputValue, setInputValue] = useState("");
     const [mode, setMode] = useState('encrypt');
+    const [inputText, setInputText] = useState('');
+    let processedText = ''
 
-    function changeMode(mode) {
-        setMode(mode)
+    function changeMode(newMode, textRef) {
+        setMode(newMode)
+        setInputText(textRef.current.value);
     }
+
+    // Executar ação após atualização do estado
+    useEffect(() => {
+        console.log(`mode atualizado`, mode);
+        console.log(inputText);
+        cipherText(inputText)
+    }, [mode, inputText]);
     
     function handleInputChange(e) {
-        let processedText = ''
+        cipherText(e.target.value)
+    }
+    
+    
+    function cipherText(text) {
+        // console.log('mode atual', mode)
+        // console.log('cifrando', text)
         if (mode === 'encrypt') {
-            processedText = Cryptography.encrypt(e.target.value)
+            processedText = Cipher.encrypt(text)
         } else if (mode === 'decrypt') {
-            processedText = Cryptography.decrypt(e.target.value)
+            processedText = Cipher.decrypt(text)
         }
         
+        // console.log('setando', processedText)
         setInputValue(processedText)
     }
 
@@ -31,7 +48,7 @@ function App() {
     return (
         <main className={styles.view}>
             <Header />
-            <InputContainer onInputChange={handleInputChange} changeMode={changeMode} mode={mode} />
+            <InputContainer onInputChange={handleInputChange} changeMode={changeMode} mode={mode} textRef/>
             <OutputContainer value={inputValue} />
         </main>
     );
