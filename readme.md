@@ -30,7 +30,7 @@ Este projeto é um SPA (Single Page Application) em React que tem como objetivo 
 
 <p align="center">
 <img src="pictures/Screenshot_1.png" alt="Logo" height=300px/>
-<img src="pictures/Screenshot_2.png" alt="Logo" height=300px/><img src="pictures/Screenshot_3.png" alt="Logo" height=300px/>
+<img src="pictures/Screenshot_2.png" alt="Logo" height=300px/>  <img src="pictures/Screenshot_3.png" alt="Logo" height=300px/>
 </p>
 
 <h2>Funcionalidades 🛠️</h2>
