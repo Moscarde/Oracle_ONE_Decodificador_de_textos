@@ -26,9 +26,12 @@
 Este projeto é um SPA (Single Page Application) em React que tem como objetivo criptografar e descriptografar uma mensagem de texto digitada pelo usuário. O aplicativo possui uma interface com um campo de entrada de texto e um campo de saída, e o usuário pode escolher criptografar ou descriptografar a mensagagem e copiar o resultado para a área de transferência através dos botões.
 
 <h2>Screenshots 📷</h2>
+
+
+<p align="center">
 <img src="pictures/Screenshot_1.png" alt="Logo" height=300px/>
-<img src="pictures/Screenshot_2.png" alt="Logo" height=300px/>
-<img src="pictures/Screenshot_3.png" alt="Logo" height=300px/>
+<img src="pictures/Screenshot_2.png" alt="Logo" height=300px/><img src="pictures/Screenshot_3.png" alt="Logo" height=300px/>
+</p>
 
 <h2>Funcionalidades 🛠️</h2>
 
