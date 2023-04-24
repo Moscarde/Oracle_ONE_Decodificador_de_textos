@@ -1,9 +1,4 @@
-
 <p align="center">
-    ⚠ Em construção ⚠
-<p>
-<p align="center">
-   
     <a href="https://moscarde.github.io/Oracle_ONE_Decodificador_de_textos/"><img src="pictures/header.png" alt="Logo" width=100%/></a>
 <p>
 <p align="center">
@@ -23,17 +18,10 @@
   Decodificador de textos - Challenge ONE + Alura
 </h1>
 
-<p align="center"><img src="pictures/app.gif" alt="gif app" height=300px/></p>
 
 Este projeto é um SPA (Single Page Application) em React que tem como objetivo criptografar e descriptografar uma mensagem de texto digitada pelo usuário. O aplicativo possui uma interface com um campo de entrada de texto e um campo de saída, e o usuário pode escolher criptografar ou descriptografar a mensagagem e copiar o resultado para a área de transferência através dos botões.
 
-<h2>Screenshots 📷</h2>
 
-
-<p align="center">
-<img src="pictures/Screenshot_1.png" alt="Logo" height=300px/>
-<img src="pictures/Screenshot_2.png" alt="Logo" height=300px/>  <img src="pictures/Screenshot_3.png" alt="Logo" height=300px/>
-</p>
 
 <h2>Funcionalidades 🛠️</h2>
 
@@ -41,7 +29,7 @@ Este projeto é um SPA (Single Page Application) em React que tem como objetivo 
 - Descriptografar um texto
 
 
-<h2>Criptografia</h2>
+<h2>Criptografia 👨‍💻</h2>
 
 - A letra "e" é convertida para "enter"
 - A letra "i" é convertida para "imes"
@@ -59,3 +47,14 @@ ou
 - Instale as dependências: npm install
 - Execute o script: npm start
 - Acesse http://localhost:3000/
+
+<h2>Screenshots 📷</h2>
+
+
+<p align="center">
+<img src="pictures/app.gif" alt="gif de uma mensagem sendo encriptada" height=400px/>
+<img src="pictures/Screenshot_1.png" alt="Screenshot versão desktop" height=300px/>
+<img src="pictures/Screenshot_2.png" alt="Screenshot versão tablet" height=300px/>  <img src="pictures/Screenshot_3.png" alt="Screenshot versão smartphone" height=300px/>
+</p>
+
+## Fim
