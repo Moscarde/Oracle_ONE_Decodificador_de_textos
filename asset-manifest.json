@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Oracle_ONE_Decodificador_de_textos/static/css/main.0d1c3479.css",
-    "main.js": "/Oracle_ONE_Decodificador_de_textos/static/js/main.5aae1bb0.js",
+    "main.js": "/Oracle_ONE_Decodificador_de_textos/static/js/main.a2cec334.js",
     "static/media/EmptText.svg": "/Oracle_ONE_Decodificador_de_textos/static/media/EmptText.cd57497a937c57681e0c30c45b9d3db9.svg",
     "static/media/Logo.svg": "/Oracle_ONE_Decodificador_de_textos/static/media/Logo.485da93e8dd21ce3fedf11ff3cb62b57.svg",
     "static/media/Attention.svg": "/Oracle_ONE_Decodificador_de_textos/static/media/Attention.59a7e2024b6e5887f17afb221aa4d077.svg",
     "index.html": "/Oracle_ONE_Decodificador_de_textos/index.html",
     "main.0d1c3479.css.map": "/Oracle_ONE_Decodificador_de_textos/static/css/main.0d1c3479.css.map",
-    "main.5aae1bb0.js.map": "/Oracle_ONE_Decodificador_de_textos/static/js/main.5aae1bb0.js.map"
+    "main.a2cec334.js.map": "/Oracle_ONE_Decodificador_de_textos/static/js/main.a2cec334.js.map"
   },
   "entrypoints": [
     "static/css/main.0d1c3479.css",
-    "static/js/main.5aae1bb0.js"
+    "static/js/main.a2cec334.js"
   ]
 }
