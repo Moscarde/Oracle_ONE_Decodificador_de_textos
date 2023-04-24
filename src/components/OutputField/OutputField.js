@@ -3,7 +3,7 @@ import React, { useState, createContext } from 'react';
 import styles from './OutputField.module.css'
 import emptyTextImg from '../../assets/img/EmptText.svg'
 
-function OutputContainer({ outputValue }) {
+function OutputContainer({ outputValue, regexStatus }) {
     const [text, setText] = useState('')
 
     function copyToClipboard(e) {
@@ -21,6 +21,7 @@ function OutputContainer({ outputValue }) {
 
     return (
         <div className={styles.container}>
+
 
             {outputValue ?
                 (
@@ -41,8 +42,19 @@ function OutputContainer({ outputValue }) {
                             className={styles.empty_text_img}>
 
                         </div>
-                        <h2>Nenhuma mensagem encontrada</h2>
-                        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                        {!regexStatus ?
+                            (
+                                <div className={styles.regex_false}>
+                                    <h2>Caracteres não aceitos</h2>
+                                    <p>Digite apenas letras minúsculas e sem acento.</p>
+                                </div>
+                            ) : (
+                                <>
+                                    <h2>Nenhuma mensagem encontrada</h2>
+                                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                                </>
+                            )}
+
                     </>
                 )
             }

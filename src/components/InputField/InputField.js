@@ -5,13 +5,19 @@ import React, { useState, useRef } from 'react';
 import styles from './InputField.module.css'
 import AttentionImg from '../../assets/img/Attention.svg'
 
-function InputContainer({ onInputChange, changeMode, mode }) {
+function InputContainer({ onInputChange, changeMode, mode, regexStatus }) {
     const textRef = useRef(null);
     let activeOption = 'decrypt'
     
     return (
         <div className={styles.container}>
-            <textarea name="inputText" placeholder="Digite seu texto" className={styles.text_area} onChange={onInputChange} ref={textRef} />
+            <textarea
+                name="inputText"
+                placeholder="Digite seu texto"
+                className={`${styles.text_area} ${!regexStatus && `${styles.regex_false}`}`}
+                onChange={onInputChange}
+                ref={textRef}
+            />
             <div className={styles.description}>
                 <div
                     style={{

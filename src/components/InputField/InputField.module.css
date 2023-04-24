@@ -47,6 +47,9 @@
     margin-right: .4em;
 }
 
+.regex_false{
+    color: #b55555;
+}
 
 .actions {
     display: flex;

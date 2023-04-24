@@ -11,15 +11,24 @@ function App() {
     const [outputValue, setOutputValue] = useState("");
     const [mode, setMode] = useState('encrypt');
     const [inputText, setInputText] = useState('');
+    const [regexStatus, setRegexStatus] = useState(true);
     let processedText = ''
+    const regex = /^[a-z]+$/;
 
+
+    function regexTest(text) {
+        if (text.length === 0 || regex.test(text)) {
+            return true
+        } else {
+            return false
+        }
+    }
 
     function changeMode(newMode, textRef) {
         setMode(newMode)
         setInputText(textRef.current.value);
     }
 
-    // Executar ação após atualização do estado
     useEffect(() => {
         textEncryption(inputText)
     }, [mode, inputText]);
@@ -28,8 +37,15 @@ function App() {
         textEncryption(e.target.value)
     }
 
-
     function textEncryption(text) {
+        
+        if (!regexTest(text)) {
+            setOutputValue('')
+            return setRegexStatus(false)
+        } else {
+            setRegexStatus(true)
+        }
+
         if (mode === 'encrypt') {
             processedText = Encryption.encrypt(text)
         } else if (mode === 'decrypt') {
@@ -42,8 +58,8 @@ function App() {
     return (
         <main>
             <Header />
-            <InputContainer onInputChange={handleInputChange} changeMode={changeMode} mode={mode} textRef />
-            <OutputContainer outputValue={outputValue} />
+            <InputContainer onInputChange={handleInputChange} changeMode={changeMode} mode={mode} textRef regexStatus={regexStatus}/>
+            <OutputContainer outputValue={outputValue} regexStatus={regexStatus} />
         </main>
     );
 }

@@ -8,6 +8,7 @@
 
 body {
   background-color: #F3F5FC;
+  transition: all 0.3s ease-in-out;
 }
 
 main {
