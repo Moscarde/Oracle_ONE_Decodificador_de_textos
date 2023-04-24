@@ -36,7 +36,6 @@ function App() {
             processedText = Encryption.decrypt(text)
         }
         setOutputValue(processedText)
-        console.log(processedText)
     }
 
 

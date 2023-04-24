@@ -3,6 +3,7 @@
     ⚠ Em construção ⚠
 <p>
 <p align="center">
+   
     <a href="https://moscarde.github.io/Oracle_ONE_Decodificador_de_textos/"><img src="pictures/header.png" alt="Logo" width=100%/></a>
 <p>
 <p align="center">
@@ -22,6 +23,7 @@
   Decodificador de textos - Challenge ONE + Alura
 </h1>
 
+<p align="center"><img src="pictures/app.gif" alt="gif app" height=300px/></p>
 
 Este projeto é um SPA (Single Page Application) em React que tem como objetivo criptografar e descriptografar uma mensagem de texto digitada pelo usuário. O aplicativo possui uma interface com um campo de entrada de texto e um campo de saída, e o usuário pode escolher criptografar ou descriptografar a mensagagem e copiar o resultado para a área de transferência através dos botões.
 
