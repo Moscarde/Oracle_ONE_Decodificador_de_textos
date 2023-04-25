@@ -13,7 +13,7 @@ function App() {
     const [inputText, setInputText] = useState('');
     const [regexStatus, setRegexStatus] = useState(true);
     let processedText = ''
-    const regex = /^[a-z]+$/;
+    const regex = /^[a-z ]+$/;
 
 
     function regexTest(text) {
